@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barra de Menú Interactivo</title>
+  <link rel="icon" href="C:\Users\Genesis\Dropbox\Mi PC (LAPTOP-3KEG9AF4)\Downloads\b5acbe0d23b2929bd2bd2a6e64d87122.jpg" type="image/x-icon">
+  <style>
+      body{
+      background-color: rgba(193, 146, 202, 0.651);
+
+    }
+    /* Estilos para la barra de menú */
+    .menu-bar {
+      background-color: #e030917c; /* Color de fondo */
+      padding: 10px; /* Espaciado interno */
+      text-align: center; /* Alineación centrada */
+      font-family: serif; /* Fuente */
+      position: relative; /* Posicionamiento relativo */
+    }
+    .menu-bar ul {
+      list-style-type: none; /* Sin viñetas */
+      margin: 0;
+      padding: 0;
+    }
+    .menu-bar ul li {
+      display: inline-block;
+      position: relative; /* Posicionamiento relativo */
+    }
+    .menu-bar ul li a {
+      text-decoration: none; /* Sin subrayado */
+      color: #fff; /* Color del texto */
+      padding: 10px 20px; /* Espaciado */
+      display: inline-block; /* Mostrar en línea */
+      transition: background-color 0.3s ease; /* Transición suave */
+    }
+    .menu-bar ul li a:hover {
+      background-color: #f19275e5; /* Color de fondo al pasar el ratón */
+    }
+    /* Estilos para el menú desplegable */
+    .submenu {
+      display: none; /* Ocultar por defecto */
+      position: absolute; /* Posicionamiento absoluto */
+      background-color: #F08080; /* Color de fondo */
+      z-index: 1; /* Capa superior */
+      padding-top: 10px; /* Espaciado superior */
+    }
+    .menu-bar ul li:hover .submenu {
+      display: block; /* Mostrar al pasar el ratón */
+    }
+    .submenu a {
+      display: block; /* Mostrar en bloque */
+      color: #fff; /* Color del texto */
+      padding: 10px 20px; /* Espaciado */
+      text-decoration: none; /* Sin subrayado */
+      transition: background-color 0.3s ease; /* Transición suave */
+    }
+    .submenu a:hover {
+      background-color: #FFA07A; /* Color de fondo al pasar el ratón */
+    }
+
+    #inicio {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+}
+
+#inicio h1 {
+    color: #333;
+}
+
+#inicio p {
+    font-size: 18px;
+}
+
+#inicio img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#inicio iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+#titulo {
+            font-size: 36px;
+            text-align: center;
+            transition: color 0.5s ease; /* Transición suave de color */
+        }
+        
+        .tuclase {
+        text-align: center; 
+        font-family: Arial Black; 
+        font-weight: bold; 
+        font-size: 30px; 
+        color: #dd90b4; 
+        text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+        }
+
+    footer {
+            background-color: #70dfe7f3;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+    }
+  </style>
+</head>
+<body>
+<h1 class="tuclase">Portafolio Lindo de Documentación de Diseños</h1>
+<div class="menu-bar">
+  <ul>
+    <li><a href="index.html">Inicio</a>
+      <ul class="submenu">
+        <li><a href="vISION.html">Visión</a></li>
+        <li><a href="MISION.html">Misión</a></li>
+        <li><a href="CONTACTO.html">Contacto</a></li>
+      </ul>
+    </li>
+    <li><a href="PORTAFOLIO.html">Portafolio</a></li>
+  </ul>
+</div>
+
+<div id="inicio">
+  <h1 id="titulo">Visión</h1>
+  <p> Optimizar e impulsar el uso de la tecnologia para las nuevas generaciones <br></p>
+  <!-- Puedes agregar imágenes -->
+  <img src="C:\Users\Genesis\Dropbox\Mi PC (LAPTOP-3KEG9AF4)\Downloads\bff69753987415bb693bcec2a1784600.jpg" alt="Descripción de la imagen" height="50" width="50">
+</div>
+
+<footer>
+  <p>&copy; 2024, Portafolio Digital - Documentacion de Diseños realizados en ADOBE ILLUSTATOR</p>
+</footer>
+
+<script>
+  // Agregar clase de "active" al menú desplegable al hacer clic
+  const submenuItems = document.querySelectorAll('.submenu a');
+  submenuItems.forEach(item => {
+    item.addEventListener('click', function() {
+      submenuItems.forEach(i => i.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
